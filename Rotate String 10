@@ -3,17 +3,16 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String s = sc.next();
-        String goal = sc.next();
-        sc.close();
+        String s = sc.nextLine().toLowerCase();
+        String goal = sc.nextLine().toLowerCase();
 
-        if (s.length() != goal.length()) {
+        if (s.length() < 1 || s.length() > 100 || goal.length() < 1 || goal.length() > 100 || 
+            s.length() != goal.length()) {
             System.out.println("false");
-        
-        }else{
-
-        String L = s + s;
-        System.out.println(L.contains(goal));
+        } else {
+            String L = s + s;
+            
+            System.out.println(L.contains(goal));
         }
-        }
+    }
 }
