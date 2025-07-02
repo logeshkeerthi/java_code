@@ -1,0 +1,26 @@
+ import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+        
+        
+        if(A>0 && A<10){
+            int B = fact(A);
+         System.out.println("Factorial of "+ A + " is: " + B);
+        }
+        else{
+            System.out.println("Invalid Input");
+        }
+       
+    }
+
+    static int fact(int C) {
+        if (C == 0 || C == 1) {
+            return 1;
+        } else {
+            return C * fact(C - 1);
+        }
+    }
+}
