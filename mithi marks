@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+    interface A {
+    void show();
+        }
+
+    interface B {
+    void display(String name, String className, int fds, int oops, int aiml);
+    }
+
+    class C implements A, B {
+        public void show() {
+            System.out.println("School");
+    }
+
+    public void display(String name, String className, int fds, int oops, int aiml) {
+        System.out.println("Student name: " + name);
+        System.out.println("Student class: " + className);
+        System.out.println("FDS marks: " + fds);
+        System.out.println("OOPs marks: " + oops);
+        System.out.println("AIML marks: " + aiml);
+    }
+}
+
+    public class Main {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter class name: ");
+        String className = sc.nextLine();
+
+        System.out.print("Enter FDS marks: ");
+        int fds = sc.nextInt();
+
+        System.out.print("Enter OOPs marks: ");
+        int oops = sc.nextInt();
+
+        System.out.print("Enter AIML marks: ");
+        int aiml = sc.nextInt();
+
+        String name = "Mithi";
+
+        C obj = new C();
+        obj.show();
+        obj.display(name, className, fds, oops, aiml);
+    }
+}
