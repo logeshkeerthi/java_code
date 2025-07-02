@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int B = sc.nextInt();
+        int C = square(B);
+        System.out.println("Square of the number is: " + C);
+    }
+
+    static int square(int D) {
+        return D * D;
+    }
+}
