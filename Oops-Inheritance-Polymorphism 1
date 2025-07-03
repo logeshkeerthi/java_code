@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+class Arithmetic {
+    void add(int a, int b) {
+        System.out.println("Adding Two Numbers of a and b is " + a + " + " + b + " = " + (a + b));
+    }
+
+    void sub(int a, int b) {
+        System.out.println("Subtracting Two Numbers of a and b is " + a + " - " + b + " = " + (a - b));
+    }
+
+    void add(int a, int b, int c) {
+        System.out.println("Adding Three Numbers of a,b and c is " + a + " + " + b + " + " + c + " = " + (a + b + c));
+    }
+
+    void sub(int a, int b, int c) {
+        System.out.println("Subtracting Three Numbers of a,b and c is " + a + " - " + b + " - " + c + " = " + (a - b - c));
+    }
+}
+
+
+
+public class Main extends Arithmetic{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        if (a > 50 || b > 50 || c > 50) {
+            System.out.println("Dear User,Kindly Enter the Valid Input.");
+        } else {
+            System.out.println("Hello User,Here Your Calculation!!!");
+            System.out.println("Addition and Subtraction using two passing datas:-");
+
+             Main calc = new Main();
+
+             calc.add(a, b);
+              calc.sub(a, b);
+
+            System.out.println("Addition and Subtraction using three passing datas:-");
+
+             calc.add(a, b, c);
+              calc.sub(a, b, c);
+        }
+
+       
+    }
+}
