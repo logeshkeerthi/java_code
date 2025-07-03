@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+class Person {
+    String name;
+    int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void display() {
+        System.out.println("Welcome User!!!Here you Information");
+        System.out.println("You details are,");
+        System.out.println("My name is " + name);
+        System.out.println("My age is " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+       
+        String name1 = scanner.nextLine();
+
+      
+        int age1 = scanner.nextInt();
+        
+
+        if (age1 > 0 && age1 < 35) {
+            Person p1 = new Person(name1, age1);
+            p1.display();
+        } else {
+            System.out.println("Dear User,Kindly Enter the valid Input...");
+        }
+    }
+}
