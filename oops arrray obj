@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+class Show {
+    void displayDetails() {}
+}
+
+class Theater extends Show {
+    String movieName;
+    String timing;
+    String language;
+
+    Theater(String movieName, String timing, String language) {
+        this.movieName = movieName;
+        this.timing = timing;
+        this.language = language;
+    }
+
+    void displayDetails() {
+        System.out.println("Movie Name:" + movieName);
+        System.out.println("Movie Timing:" + timing);
+        System.out.println("Movie Language:" + language);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = Integer.parseInt(sc.nextLine());
+        Show[] shows = new Show[n];
+
+        for (int i = 0; i < n; i++) {
+            String movieName = sc.nextLine();
+            String timing = sc.nextLine();
+            String language = sc.nextLine();
+            shows[i] = new Theater(movieName, timing, language);
+        }
+
+        System.out.println("Hello Viewers,Here Your Details!!!!");
+        for (int i = 0; i < n; i++) {
+            System.out.println("Show " + (i + 1));
+            shows[i].displayDetails();
+        }
+    }
+}
